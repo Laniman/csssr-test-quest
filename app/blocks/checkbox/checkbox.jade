@@ -1,6 +1,0 @@
-mixin checkbox(arr)
-	+b.checkbox&attributes(attributes)
-		each skill,i in arr
-			p
-				+e('input')(type='checkbox' checked=(skill.checked) id='skill-#{i}')
-				+e('label').skill(for='skill-#{i}') !{skill.value}

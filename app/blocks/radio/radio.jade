@@ -1,7 +1,0 @@
-mixin radio(arr)
-	+b.radio&attributes(attributes)
-		each obj, i in arr
-			p
-				+e('input')(type='radio' id='radio-#{i}' name='future' checked=(obj.checked))
-				+e('label').radiobutton(for='radio-#{i}')= obj.value
-
