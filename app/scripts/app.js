@@ -4,5 +4,4 @@ import '../blocks/textarea/textarea.js';
 
 $(() => {
 	svg4everybody();
-	$('head').append('<style></style>')
 });
