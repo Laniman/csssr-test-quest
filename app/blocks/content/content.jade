@@ -1,0 +1,34 @@
+include ../input/input
+include ../checkbox/checkbox
+include ../textarea/textarea
+include ../radio/radio
+include ../date/date
+include ../range/range
+
+mixin content(data)
+	+b('main').content&attributes(attributes)
+		each row in data
+			+e.row
+				- var title = row.title
+				if title
+					+e.title= title
+				- var description = row.description
+				if description
+					+e.description= description
+				+e.content
+					- var content = row.content
+					case row.type
+						when 'input'
+							+input(content)
+						when 'checkbox'
+							+checkbox(content)
+						when 'textarea'
+							+textarea(content)
+						when 'radio'
+							+radio(content)
+						when 'date'
+							+date(content)
+						when 'range'
+							+range(content)
+						default
+							- break
