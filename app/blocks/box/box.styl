@@ -1,9 +1,22 @@
 .box
+	position relative
 	margin-x auto
 	padding 60px 105px 70px
 	display block
 	max-width 1000px
 	background-image url('../images/pattern.jpg')
+
+	&:before
+		position absolute
+		content ''
+		size(252px, 106px)
+		top 48px
+		right 54px
+		background-image url('../images/stamp.png')
+
+		+mobile()
+			top 20px
+			right 20px
 
 	+mobile()
 		padding-x 10px
